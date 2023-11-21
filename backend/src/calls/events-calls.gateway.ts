@@ -17,11 +17,7 @@ interface RoomParams {
 
 @WebSocketGateway({
   cors: {
-    origin: [
-      'https://admin.socket.io',
-      'http://localhost:5173',
-      'https://dda1-2403-6200-8871-d453-1c91-d470-4d0-347d.ngrok-free.app',
-    ],
+    origin: ['https://admin.socket.io', 'http://localhost:5173'],
     credentials: true,
   },
 })
@@ -61,11 +57,9 @@ export class EventsCallsGateway implements OnGatewayInit, OnModuleInit {
     socket: Socket,
     { roomId, peerId, username }: RoomParams,
   ) {
-    debugger;
     if (!roomId || !this.rooms[roomId] || !peerId) return;
     this.rooms[roomId].push(peerId);
     socket.join(roomId);
-    debugger;
     socket.to(roomId).emit('user-joined', { peerId, username });
     socket.emit('get-users', { roomId, participants: this.rooms[roomId] });
     console.log('User joined the room', peerId);
