@@ -1,0 +1,12 @@
+.videosContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.video {
+  position: relative;
+  border: 1px solid gray;
+  background: lightgray;
+  width: 600px;
+  height: 370px;
+}

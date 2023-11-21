@@ -1,0 +1,41 @@
+.room {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.myStream {
+  display: flex;
+  justify-content: flex-end;
+  video {
+    width: 250px;
+    height: 200px;
+  }
+}
+
+.peersStream {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 2;
+
+  video {
+    width: 470px;
+    height: 350px;
+  }
+}
+
+@media(max-width:500px){
+
+  .myStream {
+    video {
+      width: 200px;
+      height: 150px;
+    }
+  }
+  .peersStream {
+    video {
+      width: 100%;
+      height: 310px;
+    }
+  }
+}

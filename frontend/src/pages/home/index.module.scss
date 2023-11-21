@@ -1,0 +1,24 @@
+.homeWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.homeContent {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.homeTitle {
+  margin-bottom: 40px;
+}
+
+.usernameInput {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.homeControls {
+  align-self: center;
+}
